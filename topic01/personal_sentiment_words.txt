@@ -1,0 +1,10 @@
+word=best intensity=strong polarity=positive
+word=great intensity=strong polarity=positive
+word=awesome intensity=strong polarity=positive
+word=mistake intensity=strong polarity=negative
+word=lack intensity=strong polarity=negative
+word=annoying intensity=strong polarity=negative
+word=nice intensity=strong polarity=positive
+word=pains intensity=strong polarity=negative
+word=spoil intensity=strong polarity=negative
+word=pretty intensity=strong polarity=positive
