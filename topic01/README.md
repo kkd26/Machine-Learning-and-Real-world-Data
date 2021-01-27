@@ -4,4 +4,4 @@ The main task in this session is to use the sentiment lexicon to automatically c
 
 ## Usage
 
-Unpack `data.tar.gz` file and move it to `Exercise 1` directory. Then add `stanford-postagger.jar` library to the project and enjoy my code in `java.uk.ac.cam.kkd26.exercises`. More details are described in `task1.pdf`.
+Unpack `data.tar.gz` file and move it to `Sentiment Detection` directory. Then add `stanford-postagger.jar` library to the project and enjoy my code in `java.uk.ac.cam.kkd26.exercises`. More details are described in `task1.pdf`.
