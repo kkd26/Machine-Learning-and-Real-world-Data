@@ -36,6 +36,11 @@ public class Exercise1 implements IExercise1 {
 		}
 	}
 
+	public static Map<String, Word> getLexicon(Path lexiconPath) throws IOException {
+		loadLexicon(lexiconPath, true);
+		return lexicon;
+	}
+
 	private static Sentiment classifyReview(Path review, Boolean improved) throws IOException {
 		double num = 0;
 
