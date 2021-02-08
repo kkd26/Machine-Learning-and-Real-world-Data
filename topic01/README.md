@@ -16,6 +16,12 @@ In this lab I showed Zipf's and Heaps' laws on graphs and estimated their parame
 
 Comparing two classifiers using a p-value measurement for statistical significance
 
+## Task 5 - Cross-validation and test sets
+
+Splitting data into folds which will create train set and cross-validation set using random or stratified random technique. Calculating average accuracy and variance of a NB classifier using the training and validation sets.
+
+Presenting The Wayne Rooney effect - testing how a NB classifier trained on previously obtained (old) data perform on a review data. Training on 2004 database and testing on 2016 database.
+
 ## Usage
 
-Unpack `data.tar.gz` file and move it to `Sentiment Detection` directory. Then add `stanford-postagger.jar` and `JavaFX` libraries to the project so you can enjoy my code in `java.uk.ac.cam.kkd26.exercises`. More details are described in `task[1-4].pdf`.
+Unpack `data.tar.gz` file and move it to `Sentiment Detection` directory. Then add `stanford-postagger.jar` and `JavaFX` libraries to the project so you can enjoy my code in `java.uk.ac.cam.kkd26.exercises`. More details are described in `task[1-5].pdf`.
