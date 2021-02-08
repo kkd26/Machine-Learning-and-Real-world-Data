@@ -1,16 +1,20 @@
 # Sentiment detection
 
-## Topic 1 - Simple Classifier
+## Task 1 - Simple Classifier
 
 The main task in this session is to use the sentiment lexicon to automatically classify a large number of film reviews as positive or negative.
 
-## Topic 2 - Naive Bayes classifier
+## Task 2 - Naive Bayes classifier
 
 A simple classifier which uses all words from a text and Bayes theorem to estimate maximum likelihood estimator for a specific sentiment.
 
-## Topic 3 - Zipf's and Heaps' laws visualisation
+## Task 3 - Zipf's and Heaps' laws visualisation
 
 In this lab I showed Zipf's and Heaps' laws on graphs and estimated their parameters from the best fit line. For this task I used large dataset with 35566 texts.
+
+## Task 4 - Statistical Testing
+
+Comparing two classifiers using a p-value measurement for statistical significance
 
 ## Usage
 
