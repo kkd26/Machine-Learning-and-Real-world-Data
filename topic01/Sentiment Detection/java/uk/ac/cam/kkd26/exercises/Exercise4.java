@@ -52,7 +52,7 @@ public class Exercise4 implements IExercise4 {
 			coef = coef.multiply(n.subtract(i).add(ONE)).divide(i);
 			sum = sum.add(coef);
 		}
-		
+
 		return sum.doubleValue() * Math.pow(.5, n.doubleValue());
 	}
 }

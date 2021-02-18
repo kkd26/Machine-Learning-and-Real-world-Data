@@ -22,6 +22,10 @@ Splitting data into folds which will create train set and cross-validation set u
 
 Presenting The Wayne Rooney effect - testing how a NB classifier trained on previously obtained (old) data perform on a review data. Training on 2004 database and testing on 2016 database.
 
+## Task 6 - Uncertainty and human agreement
+
+Extending sentiment to Neutral, training classifier. Then calculating agreement table and Fleiss' kappa.
+
 ## Usage
 
-Unpack `data.tar.gz` file and move it to `Sentiment Detection` directory. Then add `stanford-postagger.jar` and `JavaFX` libraries to the project so you can enjoy my code in `java.uk.ac.cam.kkd26.exercises`. More details are described in `task[1-5].pdf`.
+Unpack `data.tar.gz` file and move it to `Sentiment Detection` directory. Then add `stanford-postagger.jar` and `JavaFX` libraries to the project so you can enjoy my code in `java.uk.ac.cam.kkd26.exercises`. More details are described in `task[1-6].pdf`.
