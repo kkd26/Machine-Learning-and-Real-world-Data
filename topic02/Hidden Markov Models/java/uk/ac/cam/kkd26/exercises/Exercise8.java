@@ -9,7 +9,7 @@ import java.util.stream.IntStream;
 
 public class Exercise8 implements IExercise8 {
 
-	private <T, R> List<T> viterbiAlg(HiddenMarkovModel<R, T> model, List<R> observedSequence) {
+	public <T, R> List<T> viterbiAlg(HiddenMarkovModel<R, T> model, List<R> observedSequence) {
 		int time = observedSequence.size();
 		R observedStart = observedSequence.get(0);
 		R observedEnd = observedSequence.get(time - 1);
@@ -90,13 +90,13 @@ public class Exercise8 implements IExercise8 {
 		return result;
 	}
 
-	@Override
-	public double precision(Map<List<DiceType>, List<DiceType>> true2PredictedMap) {
+	private double measure(Map<List<DiceType>, List<DiceType>> true2PredictedMap, boolean isPrecision) {
 		long size = 0, count = 0;
 		for (Map.Entry<List<DiceType>, List<DiceType>> entry : true2PredictedMap.entrySet()) {
 			List<DiceType> trueSeq = entry.getKey();
 			List<DiceType> predSeq = entry.getValue();
-			IntStream intStream = IntStream.range(0, trueSeq.size()).filter(i -> predSeq.get(i) == DiceType.WEIGHTED);
+			List<DiceType> base = isPrecision ? predSeq : trueSeq;
+			IntStream intStream = IntStream.range(0, trueSeq.size()).filter(i -> base.get(i) == DiceType.WEIGHTED);
 			size += intStream.count();
 			IntStream intStream2 = IntStream.range(0, trueSeq.size()).filter(i -> trueSeq.get(i) == DiceType.WEIGHTED);
 			count += intStream2.filter(i -> trueSeq.get(i) == predSeq.get(i)).count();
@@ -105,17 +105,13 @@ public class Exercise8 implements IExercise8 {
 	}
 
 	@Override
+	public double precision(Map<List<DiceType>, List<DiceType>> true2PredictedMap) {
+		return measure(true2PredictedMap, true);
+	}
+
+	@Override
 	public double recall(Map<List<DiceType>, List<DiceType>> true2PredictedMap) {
-		long size = 0, count = 0;
-		for (Map.Entry<List<DiceType>, List<DiceType>> entry : true2PredictedMap.entrySet()) {
-			List<DiceType> trueSeq = entry.getKey();
-			List<DiceType> predSeq = entry.getValue();
-			IntStream intStream = IntStream.range(0, trueSeq.size()).filter(i -> trueSeq.get(i) == DiceType.WEIGHTED);
-			size += intStream.count();
-			IntStream intStream2 = IntStream.range(0, trueSeq.size()).filter(i -> trueSeq.get(i) == DiceType.WEIGHTED);
-			count += intStream2.filter(i -> trueSeq.get(i) == predSeq.get(i)).count();
-		}
-		return count * 1.0 / size;
+		return measure(true2PredictedMap, false);
 	}
 
 	@Override
