@@ -37,8 +37,8 @@ public class Exercise4 implements IExercise4 {
 			else Minus = Minus.add(ONE);
 		}
 
-		BigInteger base = (Null.add(ONE).divide(TWO)).multiply(TWO);
-		BigInteger n = base.add(Plus).add(Minus);
+		BigInteger base = (Null.add(ONE).divide(TWO));
+		BigInteger n = base.multiply(TWO).add(Plus).add(Minus);
 		BigInteger k = base.add(Plus.min(Minus));
 
 		// ( n )        n!         (  n  )    (n-i+1)
@@ -53,6 +53,6 @@ public class Exercise4 implements IExercise4 {
 			sum = sum.add(coef);
 		}
 
-		return sum.doubleValue() * Math.pow(.5, n.doubleValue());
+		return 2.0 * sum.doubleValue() * Math.pow(.5, n.doubleValue());
 	}
 }
